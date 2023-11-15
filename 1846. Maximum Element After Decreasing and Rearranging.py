@@ -9,7 +9,11 @@
 # Rearrange the elements of arr to be in any order.
 # Return the maximum possible value of an element in arr after performing the operations to satisfy the conditions.
 
- class Solution:
+
+
+from typing import List
+
+class Solution:
     def maximumElementAfterDecrementingAndRearranging(self, arr: List[int]) -> int:
         # Sort the array in ascending order
         arr.sort()
@@ -24,6 +28,19 @@
         
         # Return the final value of 'prev'
         return prev
+
+if __name__ == "__main__":
+    # Create an instance of the Solution class
+    solution_instance = Solution()
+
+    # Get user input for a list of integers
+    input_array = [int(x) for x in input("Enter a list of integers separated by spaces: ").split()]
+
+    # Test the maximumElementAfterDecrementingAndRearranging method with the user-provided list
+    result = solution_instance.maximumElementAfterDecrementingAndRearranging(input_array)
+
+    # Print the result
+    print("Maximum element after decrementing and rearranging:", result)
 
 
 # Example 1:
